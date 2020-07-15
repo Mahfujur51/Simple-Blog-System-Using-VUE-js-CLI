@@ -1,10 +1,37 @@
 <template>
-  <div class="hello">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+<div class="wapper  bg-light">
+<div class="container">
+  <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="">Blog</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <router-link class="nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/about" class="nav-link" >About</router-link>
+
+      </li>
+     </ul>
+  
   </div>
+</nav>
+</div>
+</div>
+
+
+
+
+  <!-- <div class="hello">
+    <div id="nav">
+     |
+      
+    </div>
+  </div> -->
 </template>
 
 <script>
@@ -15,18 +42,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
