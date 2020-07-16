@@ -12,6 +12,7 @@
     </div>
   </div>
 </div>
+<PostComments/>
 </div>
 
 
@@ -21,8 +22,12 @@
 
 <script>
 import axios from "axios";
+import PostComments from "@/views/PostComments.vue";
 export default {
   name: "PostDetails",
+  components:{
+     PostComments
+  },
   data(){
     return {
       id: this.$route.params.id,
