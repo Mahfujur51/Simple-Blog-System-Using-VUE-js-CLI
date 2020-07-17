@@ -22,3 +22,11 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+Post Page
+
+![](screenshout/1.png)
+
+Post added page
+![](screenshout/2.png)
