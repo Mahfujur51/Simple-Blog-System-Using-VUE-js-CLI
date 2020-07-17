@@ -13,15 +13,22 @@
       <div class="col-md-12">
         <div class="card bg-dark">
           <div class="card-text" v-if="formdiv">
-            <form action>
+            <form @submit.prevent="addPost">
               <div class="form-gorup">
                 <label class="text-light pull-left">Post Title</label>
-                <input type="text" name class="form-control" placeholder="Enter Post TItle" />
+                <input
+                  type="text"
+                  name="title"
+                  v-model="title"
+                  class="form-control"
+                  placeholder="Enter Post TItle"
+                />
               </div>
               <div class="form-gorup">
                 <label class="text-light pull-left">Post Description</label>
                 <textarea
-                  name
+                  name="body"
+                  v-model="body"
                   class="form-control"
                   id
                   cols="30"
@@ -31,7 +38,7 @@
               </div>
               <div class="form-gorup">
                 <div class="text-center">
-                  <input type="submit" value="Create Post" class="btn btn-success" />
+                  <button class="btn btn-block btn-success">Submit Post</button>
                 </div>
               </div>
             </form>
@@ -49,12 +56,22 @@ export default {
   name: "AddPost",
   data() {
     return {
-      formdiv: false
+      formdiv: false,
+      title: "",
+      body: ""
     };
   },
   methods: {
     formShow() {
       this.formdiv = true;
+    },
+    addPost() {
+      const newPost = {
+        title: this.title,
+        body: this.body
+      };
+      this.$emit("add-post", newPost);
+      (this.title = ""), (this.body = "");
     }
   }
 };
